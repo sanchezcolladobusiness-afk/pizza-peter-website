@@ -26,7 +26,7 @@ Barrierefreiheit (Kontrast WCAG AA auf Creme): kleiner roter Text nutzt #C4271C 
 - Akzente: Basilikum-Zweige/Blätter (Sage Green), San-Marzano-Tomaten (Tomato Red mit cremefarbenem Glanzpunkt), verstreute Mehlpunkte (helle Punkte), dunkle Oliven (Charcoal) sparsam wie im Muster des Brand Kits.
 - Hero-Icon: neapolitanisches Pizzastück mit bauschigem, leopardengeflecktem Rand (Cornicione), Mozzarella-Flecken, Tomatensauce, Basilikum.
 - Hintergrund: IMMER Creme (#F2EFE6). Auf der Website als lebendiges, ständig leicht driftendes Muster aus Tomaten, Basilikum, Oliven und Mehlpunkten (Brand-Kit-Muster „Pattern & Application“).
-- Logo-Dateien: assets/img/logo.png (transparent, Wortmarke mit Basilikum/Tomaten), assets/brand/Pizza_Peter_Logo_Base.svg, assets/brand/Pizza_Icon.svg (Slice-Icon).
+- Logo-Dateien (Pizza Fratelli, Vektor): assets/img/logo.svg (transparent, mit Basilikum/Tomaten), assets/brand/logo-creme.svg, logo-negativ.svg (Creme auf Rot), wortmarke.svg; Slice-Icon assets/brand/Pizza_Icon.svg. Generator: _work/fratelli/build_logo.py (Londrina Solid + Oswald als Pfade).
 
 ## Fotos (assets/img, JPEG, 1600px + „-sm“ 900px)
 - foto-paar.jpg – Zwei Teammitglieder (Mann mit Cap, Frau) hinter dem Pizza-Tresen unter dem Pavillon, Pizzakarton, Tischglocke. Stimmung: Gastgeber, Hochzeits-/Garten-Setting.
