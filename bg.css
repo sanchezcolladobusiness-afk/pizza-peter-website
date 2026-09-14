@@ -1,0 +1,54 @@
+/* PIZZA PETER – animierter Marken-Hintergrund (Variante A, mit Jury-Verbesserungen) */
+
+.pp-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.bg-pattern {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden;
+  background: #F2EFE6;
+  --k: .86;                                 /* globaler Größenfaktor */
+}
+@media (max-width: 640px), (max-height: 560px) { .bg-pattern { --k: .62; } }
+
+.bg-pattern .el {
+  position: absolute; display: block;
+  left: var(--x); top: var(--y);
+  width: calc(var(--s) * var(--k)); height: calc(var(--s) * var(--k));
+  margin: calc(var(--s) * var(--k) / -2) 0 0 calc(var(--s) * var(--k) / -2);   /* zentriert auf --x/--y */
+  opacity: calc(var(--o) * .5);
+  transform: translate(var(--dx), 0) rotate(calc(var(--r0) + var(--rb)));     /* = Stützstelle 0 % */
+  animation: pp-drift var(--dur) linear var(--delay) infinite;
+}
+@media (orientation: portrait) { .bg-pattern .el { left: var(--xp); top: var(--yp); } }
+@media (orientation: portrait), (max-height: 560px) { .bg-pattern .el--l { display: none; } }
+
+.el--tomato { color: #D42B1F; }
+.el--leaf, .el--sprig { color: #B9CBB0; }
+.el--leaf.is-dark, .el--sprig.is-dark { color: #8FA487; }
+.el--olive { color: #2B2A27; }
+.el--flour, .el--dot { color: #E6E1D3; }
+.el--flour.is-white, .el--dot.is-white { color: #FFFFFF; }
+
+/* Kreisbahn (dx·cosθ, dy·sinθ) + Pendel (r0 + ra·sinθ + rb·cosθ), θ = 0…360° */
+@keyframes pp-drift {
+  0%       { transform: translate(calc(var(--dx) *    1.0), calc(var(--dy) *    0.0)) rotate(calc(var(--r0) + var(--ra) *    0.0 + var(--rb) *    1.0)); }
+  8.33%    { transform: translate(calc(var(--dx) *  0.866), calc(var(--dy) *    0.5)) rotate(calc(var(--r0) + var(--ra) *    0.5 + var(--rb) *  0.866)); }
+  16.67%   { transform: translate(calc(var(--dx) *    0.5), calc(var(--dy) *  0.866)) rotate(calc(var(--r0) + var(--ra) *  0.866 + var(--rb) *    0.5)); }
+  25%      { transform: translate(calc(var(--dx) *    0.0), calc(var(--dy) *    1.0)) rotate(calc(var(--r0) + var(--ra) *    1.0 + var(--rb) *    0.0)); }
+  33.33%   { transform: translate(calc(var(--dx) *   -0.5), calc(var(--dy) *  0.866)) rotate(calc(var(--r0) + var(--ra) *  0.866 + var(--rb) *   -0.5)); }
+  41.67%   { transform: translate(calc(var(--dx) * -0.866), calc(var(--dy) *    0.5)) rotate(calc(var(--r0) + var(--ra) *    0.5 + var(--rb) * -0.866)); }
+  50%      { transform: translate(calc(var(--dx) *   -1.0), calc(var(--dy) *    0.0)) rotate(calc(var(--r0) + var(--ra) *    0.0 + var(--rb) *   -1.0)); }
+  58.33%   { transform: translate(calc(var(--dx) * -0.866), calc(var(--dy) *   -0.5)) rotate(calc(var(--r0) + var(--ra) *   -0.5 + var(--rb) * -0.866)); }
+  66.67%   { transform: translate(calc(var(--dx) *   -0.5), calc(var(--dy) * -0.866)) rotate(calc(var(--r0) + var(--ra) * -0.866 + var(--rb) *   -0.5)); }
+  75%      { transform: translate(calc(var(--dx) *   -0.0), calc(var(--dy) *   -1.0)) rotate(calc(var(--r0) + var(--ra) *   -1.0 + var(--rb) *   -0.0)); }
+  83.33%   { transform: translate(calc(var(--dx) *    0.5), calc(var(--dy) * -0.866)) rotate(calc(var(--r0) + var(--ra) * -0.866 + var(--rb) *    0.5)); }
+  91.67%   { transform: translate(calc(var(--dx) *  0.866), calc(var(--dy) *   -0.5)) rotate(calc(var(--r0) + var(--ra) *   -0.5 + var(--rb) *  0.866)); }
+  100%     { transform: translate(calc(var(--dx) *    1.0), calc(var(--dy) *   -0.0)) rotate(calc(var(--r0) + var(--ra) *   -0.0 + var(--rb) *    1.0)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-pattern .el { animation: none; }
+}
+
+/* Ergänzungen nach Jury-Notizen */
+.bg-pattern .el.is-dark { --vein: #F2EFE6; }
+.bg-pattern .el--leaf, .bg-pattern .el--sprig { --vein: #8FA487; }

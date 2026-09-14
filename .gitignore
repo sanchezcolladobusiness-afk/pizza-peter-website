@@ -1,0 +1,4 @@
+# Arbeitsordner mit Zwischenständen, Werkzeugen und großen Renderings – nicht veröffentlichen
+_work/
+.DS_Store
+server.log
