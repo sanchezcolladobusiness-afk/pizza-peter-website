@@ -1,9 +1,9 @@
 /* ==========================================================================
-   PIZZA PETER – OnePager
+   PIZZA FRATELLI – OnePager
    Farben, Schriften und Formen nach dem Pizza-Peter-Brand-Kit
    ========================================================================== */
 
-@font-face { font-family: 'Caveat Brush'; src: url('assets/fonts/caveatbrush.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Londrina Solid'; src: url('assets/fonts/londrina-solid.ttf') format('truetype'); font-weight: 900; font-display: swap; }
 @font-face { font-family: 'Oswald'; src: url('assets/fonts/oswald.woff2') format('woff2'); font-weight: 200 700; font-display: swap; }
 
 :root {
@@ -19,7 +19,7 @@
   --red-text: #C4271C;   /* Rot für kleinen Text (AA 5.0:1 auf Creme) */
   --sage-text: #5F7757;  /* Sage für kleinen Text (4.3:1, nur ≥ 18px bold / dekorativ) */
 
-  --font-display: 'Caveat Brush', 'Marker Felt', 'Chalkboard SE', cursive;
+  --font-display: 'Londrina Solid', 'Arial Black', Impact, sans-serif;
   --font-head: 'Oswald', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
   --font-body: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
@@ -59,7 +59,7 @@ button { font: inherit; }
 /* --------------------------------------------------------------------------
    Typografie
    -------------------------------------------------------------------------- */
-.display { font-family: var(--font-display); font-weight: 400; line-height: .92; color: var(--red); letter-spacing: .005em; }
+.display { font-family: var(--font-display); font-weight: 900; line-height: .92; color: var(--red); letter-spacing: .01em; }
 .head { font-family: var(--font-head); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -108,7 +108,8 @@ h1, h2, h3, h4, p { margin: 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--red); }
 .brand .brand__ico { width: 34px; height: 34px; transition: transform .6s var(--ease-spring); }
 .brand:hover .brand__ico { transform: rotate(-25deg) scale(1.1); }
-.brand__word { font-family: var(--font-display); font-size: 32px; line-height: 1; letter-spacing: .01em; transform: rotate(-2deg); }
+.brand__word { font-family: var(--font-display); font-weight: 900; font-size: 30px; line-height: 1; letter-spacing: .02em; }
+.brand__word b { font-weight: 900; text-transform: uppercase; }
 .nav { display: flex; align-items: center; gap: 30px; }
 .nav__link {
   font-family: var(--font-head); font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink);
@@ -194,7 +195,7 @@ body.menu-open .menu-overlay a { opacity: 1; transform: none; }
 .panel--hero { min-height: 0; padding: 4px 0 8vh; }
 .panel--hero .lead { font-size: clamp(17px, 1.25vw, 20px); }
 .hero__scroll { margin-top: 34px; }
-.hero__logo { width: min(340px, 78%); margin: 0 0 22px; transform-origin: left center; }
+.hero__logo { width: min(520px, 100%); margin: 0 0 6px -4%; transform-origin: left center; }
 .panel--hero .headline { font-size: clamp(40px, 4.6vw, 72px); }
 .hero__logo img { width: 100%; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
@@ -330,7 +331,7 @@ body.menu-open .menu-overlay a { opacity: 1; transform: none; }
 
 .footer { background: var(--red); color: var(--cream); padding: calc(6vh + 20px) var(--pad) 40px; position: relative; }
 .footer__inner { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px; align-items: start; }
-.footer__logo { width: min(280px, 70%); }
+.footer__logo { width: min(360px, 90%); margin-left: -6%; }
 .footer__claim { font-family: var(--font-display); font-size: clamp(30px, 3vw, 44px); line-height: 1; margin-top: 14px; }
 .footer .footer__h { font-family: var(--font-head); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; font-size: 13px; opacity: .8; margin-bottom: 14px; }
 .footer a { color: var(--cream); }
@@ -410,7 +411,7 @@ html.js .is-in .reveal--pop { transform: none; }
   .journey > .panel--hero { padding: calc(var(--big) - var(--bar-h) + 30px) var(--pad) 6vh; min-height: 0; scroll-margin-top: var(--topbar-h); }
   .panel { min-height: auto; padding: 8vh var(--pad) 8vh; scroll-margin-top: calc(var(--topbar-h) + var(--bar-h) + 8px); }
   .panel--hero, .panel--hero-top { text-align: center; }
-  .panel--hero-top .hero__logo { margin: 0 auto 4px; width: min(300px, 80%); }
+  .panel--hero-top .hero__logo { margin: 0 auto 0; width: min(420px, 100%); }
   .panel--hero-top .eyebrow { justify-content: center; }
   .panel--hero .hero__cta { justify-content: center; }
   .panel--hero .lead { margin-left: auto; margin-right: auto; }
@@ -418,7 +419,7 @@ html.js .is-in .reveal--pop { transform: none; }
   .headline { font-size: clamp(40px, 11vw, 64px); }
   .form { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr; gap: 28px; text-align: center; }
-  .footer__logo { margin: 0 auto; width: min(240px, 70%); }
+  .footer__logo { margin: 0 auto; width: min(340px, 96%); }
   .footer__bottom { justify-content: center; text-align: center; }
   .team { gap: 12px; }
   .team .about { font-size: 15.5px; }

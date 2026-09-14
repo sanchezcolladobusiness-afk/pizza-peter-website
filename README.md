@@ -1,7 +1,7 @@
-# Pizza Peter – Website (OnePager)
+# Pizza Fratelli – Website (OnePager)
 
 Statische Website ohne Build-Tools: `index.html`, `style.css`, `bg.css`, `main.js`, `assets/`.
-Marke nach dem Pizza-Peter-Brand-Kit (Tomatenrot `#D42B1F`, Basilikum `#B9CBB0`, Creme `#F2EFE6`; Caveat Brush + Oswald, lokal in `assets/fonts`).
+Marke nach dem Brand-Kit (Tomatenrot `#D42B1F`, Basilikum `#B9CBB0`, Creme `#F2EFE6`; Londrina Solid + Oswald, lokal in `assets/fonts`). Logo-Dateien als Vektor in `assets/brand` (Creme, Negativ auf Rot, Wortmarke); Generator `_work/fratelli/build_logo.py`.
 
 ## Ansehen
 - **Auf dem Mac:** `index.html` doppelklicken.

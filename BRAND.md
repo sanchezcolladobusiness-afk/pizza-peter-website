@@ -1,7 +1,7 @@
-# Pizza Peter – Brand Brief für die Website (OnePager)
+# Pizza Fratelli – Brand Brief für die Website (OnePager)
 
 ## Marke
-- Name: **Pizza Peter** (Wortmarke „PIZZA PETER“, dazu klein „ODENWALD“), Pizza Napoletana, Weschnitztal · Odenwald, „since 2026“.
+- Name: **Pizza Fratelli** (Wortmarke „PIZZA FRATELLI“, dazu klein „ODENWALD“), Pizza Napoletana, Weschnitztal · Odenwald, „since 2026“.
 - Konzept: Mobile neapolitanische Pizza für Events – Hochzeiten, Geburtstage, Firmenfeiern, Vereinsfeste, Gartenpartys.
   Wir bringen alles mit (Ofen, Teig, Zutaten, Equipment), bauen alles auf, machen den Service, auf Wunsch auch die Getränke.
   Gefühl: modern-retro neapolitanische Trattoria, ehrlich, handgemacht, herzlich, ein bisschen frech. Kein Fast Food, kein Pizza-Lieferdienst.

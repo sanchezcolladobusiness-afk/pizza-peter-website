@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PIZZA PETER – main.js
+   PIZZA FRATELLI – main.js
    Pizza-Navigation (8 Stücke mit Käsefäden), Scroll-Choreografie,
    Menü, FAQ, Anfrage-Formular
    ========================================================================== */
@@ -12,8 +12,8 @@
 const CONFIG = {
   phoneDisplay: '0170 000 00 00',        // PLATZHALTER – so wird die Nummer angezeigt
   phoneLink:    '+491700000000',         // PLATZHALTER – Nummer für den Anruf-Link (international, ohne Leerzeichen)
-  email:        'hallo@pizza-peter.de',  // PLATZHALTER
-  instagram:    'pizzapeter.odenwald',   // PLATZHALTER – Instagram-Name ohne @
+  email:        'hallo@pizza-fratelli.de',  // PLATZHALTER
+  instagram:    'pizzafratelli.odenwald',   // PLATZHALTER – Instagram-Name ohne @
   whatsapp:     '491700000000',          // PLATZHALTER – Ländervorwahl ohne + und ohne führende 0
   teamNames:    ['', '', '', ''],        // Namen zu den 4 Team-Fotos (leer = nur Rolle anzeigen)
 };
@@ -365,7 +365,7 @@ function setupForm() {
   const compose = () => {
     const f = new FormData(form);
     const lines = [
-      `Hallo Pizza Peter,`,
+      `Hallo Pizza Fratelli,`,
       ``,
       `ich möchte eine Anfrage stellen:`,
       `Name: ${f.get('name') || '-'}`,
@@ -408,7 +408,7 @@ function setupForm() {
    Start
    --------------------------------------------------------------------------- */
 document.addEventListener('DOMContentLoaded', () => {
-  const safe = (fn, name) => { try { return fn(); } catch (err) { console.error('Pizza Peter:', name, err); return null; } };
+  const safe = (fn, name) => { try { return fn(); } catch (err) { console.error('Pizza Fratelli:', name, err); return null; } };
   safe(applyConfig, 'config');
   const pizza = safe(createPizza, 'pizza');
   safe(() => createScrollDirector(pizza), 'scroll');
